@@ -57,16 +57,28 @@
     }
     .button {
       position: absolute;
-      margin-left: 25%;
-      margin-right: 25%;
-      margin-top: 10px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 95px;
       z-index: -1;
+    }
+
+    .button:hover {
+      cursor: pointer;
+      color: #b32222;
+    }
+    .lining {
+      position: absolute;
+      /* center vertically */
+      left: 50%;
+      margin-top: 95px;
+      transform: translate(-50%, -50%);
     }
     .bulb {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 38px;
+      margin-top: 48px;
       z-index: 1;
     }
   </style>
@@ -82,13 +94,24 @@
         <img src="lining.svg" alt="" />
       </div> -->
     </div>
+    <div class="lining">
+      <svg
+        width="170"
+        height="170"
+        viewBox="0 0 170 170"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="85" cy="85" r="84.5" stroke="#4F4F4F" />
+      </svg>
+    </div>
     <div class="bulb">
-      <div class="bulb_on">
+      <!-- <div class="bulb_on">
         <img src="bulb_white.svg" alt="" />
-      </div>
-      <!-- <div class="bulb_off">
-        <img src="bulb_black.svg" alt="" />
       </div> -->
+      <div class="bulb_off">
+        <img src="bulb_black.svg" alt="" />
+      </div>
     </div>
   </body>
 </html>
