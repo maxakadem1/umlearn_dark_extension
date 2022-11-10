@@ -1,21 +1,18 @@
 {
+  "manifest_version": 3,
   "name": "UMLearn Dark Theme",
   "description": "A dark theme for D2L platform called UMlearn, for University of Manitoba",
-  "manifest_version": 2,
-  "version": "1.0.0",
-  "author": "Max Abdulkhalikov, Denys Popov",
+  "version": "0.0.1",
+  "author": "Max Abdulkhalikov, Denys popov",
   "browser_action": {
-    "default_title": "UMLearn DARK",
-    "default_popup": "popup.html"
+    "default_title": "UMlearn dark theme"
   },
   "permissions": [
-    "https://*/*",
-    "http://*/*",
     "tabs",
     "webNavigation",
     "https://universityofmanitoba.desire2learn.com"
   ],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": []
   }
 }
