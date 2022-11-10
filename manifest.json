@@ -12,10 +12,10 @@
     "https://*/*",
     "http://*/*",
     "tabs",
-    "webNavigation",
     "https://universityofmanitoba.desire2learn.com"
   ],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["background.js"],
+    "persistent": true
   }
 }
