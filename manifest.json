@@ -10,7 +10,7 @@
     "permissions": [
         "tabs",
         "webNavigation",
-        "https://universityofmanitoba.desire2learn.com/"
+        "https://universityofmanitoba.desire2learn.com"
     ],
     "background": {
         "scripts": [
