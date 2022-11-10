@@ -14,51 +14,81 @@
   </head>
   <style>
     body {
+      /* body css */
       background-color: #000000;
       color: #d4d4d4;
       font-family: "IBM Plex Sans", sans-serif;
       font-size: 16px;
       font-weight: 600;
       min-width: 300px;
-      max-width: 100%;
+      min-height: 320px;
+      max-height: 320px;
+      max-width: 300px;
       margin: 0;
       padding: 0;
     }
     h1 {
-      /* center vertically */
+      /* UMLEARN text css */
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: "IBM Plex Mono", sans-serif;
-      font-size: 20px;
+      font-size: 36px;
       font-weight: 400;
       color: #fff;
       margin: 0;
       padding: 0;
+      margin-top: 20px;
     }
     h2 {
+      /* DARK text css */
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: "IBM Plex Sans", sans-serif;
-      font-size: 16px;
+      font-size: 48px;
+      text-align: center;
+      letter-spacing: 0.45em;
+      text-indent: 0.45em;
       font-weight: 600;
       color: #fff;
       margin: 0;
       padding: 0;
     }
-    button {
+    .button {
+      position: absolute;
+      margin-left: 25%;
+      margin-right: 25%;
+      margin-top: 10px;
+      z-index: -1;
+    }
+    .bulb {
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-top: 38px;
+      z-index: 1;
     }
   </style>
   <body>
     <h1>UMLEARN</h1>
     <h2>DARK</h2>
+
     <div class="button">
-      <div class="bulb">ON</div>
-      <div class="circle">OFF</div>
+      <div class="circle">
+        <img src="circle.svg" alt="" />
+      </div>
+      <!-- <div class="lining">
+        <img src="lining.svg" alt="" />
+      </div> -->
+    </div>
+    <div class="bulb">
+      <div class="bulb_on">
+        <img src="bulb_white.svg" alt="" />
+      </div>
+      <!-- <div class="bulb_off">
+        <img src="bulb_black.svg" alt="" />
+      </div> -->
     </div>
   </body>
 </html>
