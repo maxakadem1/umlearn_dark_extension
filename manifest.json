@@ -8,13 +8,9 @@
     "default_title": "UMLearn DARK",
     "default_popup": "popup.html"
   },
-  "permissions": [
-    "https://*/*",
-    "http://*/*",
-    "tabs"
-  ],
+  "permissions": ["https://*/*", "http://*/*", "tabs"],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["darkTheme.js"],
     "persistent": true
   }
 }
