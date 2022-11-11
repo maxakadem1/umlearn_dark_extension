@@ -9,22 +9,23 @@ if(document.querySelector(".popup"))
 
     button.addEventListener("click", () => 
     {
-    if (!buttonOn) {
-        buttonOn = true;
-        chrome.tabs.executeScript(
+        if (!buttonOn) 
         {
-            file: "appOn.js"
-        })
-        
-    } 
-    else 
-    {
-        buttonOn = false;
-        chrome.tabs.executeScript(
+            buttonOn = true;
+            chrome.tabs.executeScript(
+            {
+                file: "appOn.js"
+            })
+            
+        } 
+        else 
         {
-            file: "appOff.js"
-        })
-    }
+            buttonOn = false;
+            chrome.tabs.executeScript(
+            {
+                file: "appOff.js"
+            })
+        }
     });
 }
 
