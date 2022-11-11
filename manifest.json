@@ -10,7 +10,7 @@
   },
   "permissions": ["https://*/*", "http://*/*", "tabs"],
   "background": {
-    "scripts": ["darkTheme.js"],
+    "scripts": ["darkTheme.js", "appOn.js", "appOff.js"],
     "persistent": true
   }
 }
