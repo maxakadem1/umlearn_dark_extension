@@ -20,7 +20,6 @@ if (document.querySelector(".popup")) {
       buttonOn = false;
       //change local storage to false
       localStorage.setItem("buttonOn", "false");
-      chrome.storage.sync.set({ buttonOn: false });
       chrome.tabs.executeScript({
         file: "appOff.js",
       });
