@@ -12,9 +12,9 @@ if(document.querySelector(".popup"))
     if (!buttonOn) {
         buttonOn = true;
         chrome.tabs.executeScript(
-            {
-                file: "appOn.js"
-            })
+        {
+            file: "appOn.js"
+        })
         
     } 
     else 
