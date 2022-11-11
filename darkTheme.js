@@ -1,39 +1,36 @@
 // class responsible for text color: .d2l-typography
 // class responsible for navigation link text color: d2l-navigation-s-item
-
-let media = document.querySelectorAll("img, picture, video");
-const button = document.querySelector("button");
-const circle = document.querySelector(".circle");
-
-let buttonOn = false;
-
-button.addEventListener("click", () => 
+if(document.querySelector(".popup"))
 {
-  if (!buttonOn) {
-    buttonOn = true;
-    document.querySelector("html").style.filter = "invert(1) hue-rotate(180deg)";
+    let media = document.querySelectorAll("img, picture, video");
+    const button = document.querySelector("button");
+    const circle = document.querySelector(".circle");
 
-    media.forEach((mediaItem)=>
+    let buttonOn = false;
+
+    button.addEventListener("click", () => 
     {
-        mediaItem.style.filter = "invert(1) hue-rotate(180deg)";
-    })
-  } 
-  else 
-  {
-    buttonOn = false;
-    document.querySelector("html").style.filter = "invert(0) hue-rotate(0)";
+    if (!buttonOn) {
+        buttonOn = true;
+        document.querySelector("html").style.filter = "invert(1) hue-rotate(180deg)";
 
-    media.forEach((mediaItem)=>
+        media.forEach((mediaItem)=>
+        {
+            mediaItem.style.filter = "invert(1) hue-rotate(180deg)";
+        })
+    } 
+    else 
     {
-        mediaItem.style.filter = "invert(0) hue-rotate(0)";
-    })
-  }
-});
+        buttonOn = false;
+        document.querySelector("html").style.filter = "invert(0) hue-rotate(0)";
+
+        media.forEach((mediaItem)=>
+        {
+            mediaItem.style.filter = "invert(0) hue-rotate(0)";
+        })
+    }
+    });
+}
 
 
-
-//if button on
-
-
-//if button off
 
