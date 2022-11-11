@@ -3,7 +3,7 @@
 if(document.querySelector(".popup"))
 {
     
-    const button = document.querySelector("button");
+    const button = document.querySelector(".button");
 
     let buttonOn = false;
 
