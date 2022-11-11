@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "Max Abdulkhalikov, Denys Popov",
   "browser_action": {
+    "default_icon": "logo.png",
     "default_title": "UMLearn DARK",
     "default_popup": "popup.html"
   },
