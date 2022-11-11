@@ -9,6 +9,7 @@ if (document.querySelector(".popup")) {
   button.addEventListener("click", () => {
     if (!buttonOn) {
       buttonOn = true;
+      chrome.storage.sync.set({ buttonOn: true });
       chrome.tabs.executeScript({
         file: "appOn.js",
       });
@@ -16,6 +17,7 @@ if (document.querySelector(".popup")) {
       images.src = "1.svg";
     } else {
       buttonOn = false;
+      chrome.storage.sync.set({ buttonOn: false });
       chrome.tabs.executeScript({
         file: "appOff.js",
       });

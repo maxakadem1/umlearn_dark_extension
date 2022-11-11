@@ -10,7 +10,8 @@
   },
   "permissions": [
     "https://universityofmanitoba.desire2learn.com/",
-    "https://umlearn.desire2learn.com/"
+    "https://umlearn.desire2learn.com/",
+    "storage"
   ],
   "background": {
     "scripts": ["darkTheme.js", "appOn.js", "appOff.js"],
