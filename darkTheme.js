@@ -7,9 +7,10 @@ if (document.querySelector(".popup")) {
   let buttonOn = false;
 
   button.addEventListener("click", () => {
-    if (!buttonOn) {
+    if (localStorage.getItem("buttonOn") === "false") {
       buttonOn = true;
-      chrome.storage.sync.set({ buttonOn: true });
+      //change local storage to true
+      localStorage.setItem("buttonOn", "true");
       chrome.tabs.executeScript({
         file: "appOn.js",
       });
@@ -17,6 +18,8 @@ if (document.querySelector(".popup")) {
       images.src = "1.svg";
     } else {
       buttonOn = false;
+      //change local storage to false
+      localStorage.setItem("buttonOn", "false");
       chrome.storage.sync.set({ buttonOn: false });
       chrome.tabs.executeScript({
         file: "appOff.js",
