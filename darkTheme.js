@@ -4,17 +4,17 @@ if (document.querySelector(".popup")) {
 
   let buttonOn = false;
 
+  chrome.storage.local.get(["buttonOn"], function (result) {
+    console.log("I got: " + result.buttonOn);
+    buttonOn = result.buttonOn;
+  });
+
   button.addEventListener("click", () => {
-    chrome.storage.local.get(["buttonOn"], function (result) {
-      console.log("I got: " + result.buttonOn);
-      buttonOn = result.buttonOn;
-    });
-    if (buttonOn === false) {
+    if (buttonOn == false) {
       buttonOn = true;
       //change local storage to true
-      chrome.storage.local.set({ buttonOn: true }, function () {
-        console.log("I set: " + buttonOn);
-      });
+      chrome.storage.local.set({ buttonOn: true }, function () {});
+      console.log("I set: " + buttonOn);
       // localStorage.setItem("buttonOn", "true");
 
       chrome.tabs.query({ active: true }, function (tabs) {
@@ -27,12 +27,11 @@ if (document.querySelector(".popup")) {
 
       //change 1.svg to 2.svg
       images.src = "1.svg";
-    } else if (buttonOn === true) {
+    } else if (buttonOn == true) {
       buttonOn = false;
       //change local storage to false
-      chrome.storage.local.set({ buttonOn: false }, function () {
-        console.log("I set: " + buttonOn);
-      });
+      chrome.storage.local.set({ buttonOn: false }, function () {});
+      console.log("I set: " + buttonOn);
       //localStorage.setItem("buttonOn", "false");
 
       chrome.tabs.query({ active: true }, function (tabs) {
