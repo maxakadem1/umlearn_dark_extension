@@ -9,7 +9,7 @@
     mediaItem.style.filter = "invert(0) hue-rotate(0)";
   });
 
-  if(document.querySelector("d2l-my-courses"))
+  if(document.querySelector("d2l-my-courses") && document.querySelector("d2l-my-courses").shadowRoot.querySelector("d2l-my-courses-container"))
     {
       //find all d2l enrollment cards udner multiple shadow roots
       let enrollmentCards = document.querySelector("d2l-my-courses")
