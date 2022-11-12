@@ -5,11 +5,14 @@ if (document.querySelector(".popup")) {
   let buttonOn = false;
 
   button.addEventListener("click", () => {
+    chrome.storage.local.get(["buttonOn"], function (result) {
+      console.log("I got: " + result.buttonOn);
+      buttonOn = result.buttonOn;
+    });
     if (buttonOn === false) {
-      buttonOn = true;
       //change local storage to true
       chrome.storage.local.set({ buttonOn: true }, function () {
-        console.log("Value is set to " + buttonOn);
+        console.log("I set: " + buttonOn);
       });
       // localStorage.setItem("buttonOn", "true");
 
@@ -23,11 +26,10 @@ if (document.querySelector(".popup")) {
 
       //change 1.svg to 2.svg
       images.src = "1.svg";
-    } else {
-      buttonOn = false;
+    } else if (buttonOn === true) {
       //change local storage to false
       chrome.storage.local.set({ buttonOn: false }, function () {
-        console.log("Value is set to " + buttonOn);
+        console.log("I set: " + buttonOn);
       });
       //localStorage.setItem("buttonOn", "false");
 
@@ -41,6 +43,8 @@ if (document.querySelector(".popup")) {
 
       //change 1.svg to 2.svg
       images.src = "2.svg";
+    } else {
+      console.log("error");
     }
   });
 }
