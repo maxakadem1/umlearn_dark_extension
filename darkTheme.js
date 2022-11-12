@@ -10,6 +10,7 @@ if (document.querySelector(".popup")) {
       buttonOn = result.buttonOn;
     });
     if (buttonOn === false) {
+      buttonOn = true;
       //change local storage to true
       chrome.storage.local.set({ buttonOn: true }, function () {
         console.log("I set: " + buttonOn);
@@ -27,6 +28,7 @@ if (document.querySelector(".popup")) {
       //change 1.svg to 2.svg
       images.src = "1.svg";
     } else if (buttonOn === true) {
+      buttonOn = false;
       //change local storage to false
       chrome.storage.local.set({ buttonOn: false }, function () {
         console.log("I set: " + buttonOn);
