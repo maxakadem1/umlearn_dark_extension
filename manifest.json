@@ -5,9 +5,7 @@
   "version": "1.0.0",
   "author": "Max Abdulkhalikov, Denys Popov",
   "action": {
-    "default_popup": "popup.html"
-  },
-  "browser_action": {
+    "default_popup": "popup.html",
     "default_icon": "logo.png",
     "default_title": "UMLearn DARK"
   },
@@ -16,13 +14,13 @@
     "48": "logo.png",
     "128": "logo.png"
   },
-  "permissions": [
+  "permissions": ["storage", "webNavigation"],
+  "host_permissions": [
     "https://universityofmanitoba.desire2learn.com/",
-    "https://umlearn.desire2learn.com/",
-    "storage",
-    "webNavigation"
+    "https://umlearn.desire2learn.com/"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   }
 }

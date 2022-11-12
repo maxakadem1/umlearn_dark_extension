@@ -1,3 +1,4 @@
+// "persistent": true was removed from manifest.json
 chrome.webNavigation.onCommitted.addListener(function () {
   //if local storage is true, run appOn.js
   if (localStorage.getItem("buttonOn") === "true") {
@@ -54,5 +55,3 @@ if (document.querySelector(".popup")) {
     }
   });
 }
-
-// "persistent": true was removed from manifest.json
