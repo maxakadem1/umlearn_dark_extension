@@ -27,29 +27,24 @@ if (document.querySelector(".popup")) {
       buttonOn = true;
       //change local storage to true
       localStorage.setItem("buttonOn", "true");
-      let media = document.querySelectorAll(
-        "img, picture, video, div.d2l-enrollment-card-image-container, slot, div.d2l-card-header"
-      );
-      document.querySelector("html").style.filter =
-        "invert(1) hue-rotate(180deg)";
 
-      media.forEach((mediaItem) => {
-        mediaItem.style.filter = "invert(1) hue-rotate(180deg)";
+      chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ["appOn.js"],
       });
+
       //change 1.svg to 2.svg
       images.src = "1.svg";
     } else {
       buttonOn = false;
       //change local storage to false
       localStorage.setItem("buttonOn", "false");
-      let media = document.querySelectorAll(
-        "img, picture, video, div.d2l-enrollment-card-image-container, slot, div.d2l-card-header"
-      );
-      document.querySelector("html").style.filter = "invert(0) hue-rotate(0)";
 
-      media.forEach((mediaItem) => {
-        mediaItem.style.filter = "invert(0) hue-rotate(0)";
+      chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ["appOff.js"],
       });
+
       //change 1.svg to 2.svg
       images.src = "2.svg";
     }
