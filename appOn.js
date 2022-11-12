@@ -1,7 +1,8 @@
-(function(){
+(function()
+{
     let media = document.querySelectorAll("img, picture, video");
     console.log("App on ran");
-    
+
     document.querySelector("html").style.filter = "invert(1) hue-rotate(180deg)";
 
     media.forEach((mediaItem)=>
@@ -25,5 +26,6 @@
             enrollmentCard.shadowRoot.querySelector(".d2l-enrollment-card-image-container").style.filter = "invert(1) hue-rotate(180deg)";
         })
     }
-    
 })();
+
+
