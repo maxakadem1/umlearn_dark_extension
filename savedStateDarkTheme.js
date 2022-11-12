@@ -1,3 +1,5 @@
+
+
 chrome.storage.local.get(["buttonOn"], function (result) {
   console.log("I got (memory): " + result.buttonOn);
   buttonOn = result.buttonOn;

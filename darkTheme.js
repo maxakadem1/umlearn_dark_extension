@@ -3,7 +3,10 @@ if (document.querySelector(".popup"))
   const button = document.querySelector(".button");
   const images = document.querySelector(".images");
 
+
   let buttonOn;
+  chrome.storage.local.set({ buttonOn: false }, function () {});
+  console.log("I set: " + buttonOn);
 
   chrome.storage.local.get(["buttonOn"], function (result) {
     console.log("I got: " + result.buttonOn);
