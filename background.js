@@ -15,7 +15,7 @@
 
 
 // "persistent": true was removed from manifest.json
-chrome.webNavigation.onCompleted.addListener(function () {
+chrome.webNavigation.onCommitted.addListener(function () {
     chrome.tabs.query({ active: true }, function (tabs) {
     let tab = tabs[0];
     chrome.scripting.executeScript(
