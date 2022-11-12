@@ -21,7 +21,7 @@ chrome.webNavigation.onCompleted.addListener(function () {
     chrome.scripting.executeScript(
         {
             target: {tabId: tab.id},
-            files: ['savedStateDarkTheme.js', 'darkTheme.js']
+            files: ['savedStateDarkTheme.js']
         },
     );
     });

@@ -1,10 +1,9 @@
-console.log()
 if (document.querySelector(".popup")) {
     const button = document.querySelector(".button");
     const images = document.querySelector(".images");
 
     let buttonOn = false;
-    
+        
     button.addEventListener("click", () => {
         if (localStorage.getItem("buttonOn") === "false") {
             buttonOn = true;
