@@ -14,7 +14,7 @@
     "48": "logo.png",
     "128": "logo.png"
   },
-  "permissions": ["storage", "webNavigation"],
+  "permissions": ["storage", "webNavigation", "scripting"],
   "host_permissions": [
     "https://universityofmanitoba.desire2learn.com/",
     "https://umlearn.desire2learn.com/"
