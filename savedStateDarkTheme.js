@@ -4,9 +4,9 @@ chrome.storage.local.get(["buttonOn"], function (result) {
 });
 
 //if local storage is true, run appOn.js
-if (buttonOn === true) {
+if (buttonOn == true) {
   let media = document.querySelectorAll(
-    "img, picture, video, div.d2l-enrollment-card-image-container, slot, div.d2l-card-header"
+    "img, picture, video"
   );
 
   document.querySelector("html").style.filter = "invert(1) hue-rotate(180deg)";

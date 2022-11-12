@@ -1,4 +1,5 @@
-if (document.querySelector(".popup")) {
+if (document.querySelector(".popup")) 
+{
   const button = document.querySelector(".button");
   const images = document.querySelector(".images");
 
@@ -8,6 +9,12 @@ if (document.querySelector(".popup")) {
     console.log("I got: " + result.buttonOn);
     buttonOn = result.buttonOn;
   });
+
+  // //set image light bulb in the pop up to be dark if the user used dark mode previously
+  // if (buttonOn)
+  // {
+  //   images.src = "1.svg";
+  // }
 
   button.addEventListener("click", () => {
     if (buttonOn == false) {

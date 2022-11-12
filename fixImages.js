@@ -1,17 +1,29 @@
-(function()
+(function waitForCourseContainer() {
+    const observer = new MutationObserver(function (mutations, mutationInstance) {
+        const element = document.querySelectorAll("d2l-my-courses-container");
+        if (element) {
+            fixImagesD2l();
+            mutationInstance.disconnect();
+        }
+    });
+    
+    observer.observe(document, {
+        childList: true,
+        subtree:   true
+    });
+}) ();
+
+
+function fixImagesD2l()
 {
-    let media = document.querySelectorAll("img, picture, video");
-    console.log("App on ran");
+    chrome.storage.local.get(["buttonOn"], function (result) {
+        console.log("I got (memory): " + result.buttonOn);
+        buttonOn = result.buttonOn;
+      });
 
-    document.querySelector("html").style.filter = "invert(1) hue-rotate(180deg)";
 
-    media.forEach((mediaItem)=>
-    {
-        mediaItem.style.filter = "invert(1) hue-rotate(180deg)";
-    })
 
-    if(document.querySelector("d2l-my-courses") && document.querySelector("d2l-my-courses").shadowRoot.querySelector("d2l-my-courses-container"))
-    {
+    if (buttonOn == true) {
         //find all d2l enrollment cards udner multiple shadow roots
         let enrollmentCards = document.querySelector("d2l-my-courses")
         .shadowRoot.querySelector("d2l-my-courses-container")
@@ -26,4 +38,4 @@
             enrollmentCard.shadowRoot.querySelector(".d2l-enrollment-card-image-container").style.filter = "invert(1) hue-rotate(180deg)";
         })
     }
-})();
+}
