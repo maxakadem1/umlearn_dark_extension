@@ -3,6 +3,10 @@ chrome.storage.local.get(["buttonOn"], function (result) {
   buttonOn = result.buttonOn;
   //if local storage is true, run appOn.js
   if (buttonOn == true) {
+    //IT BREAKS EVERYTHING WTF
+
+    //images.src = "1.svg";
+
     let media = document.querySelectorAll("img, picture, video");
 
     document.querySelector("html").style.filter =

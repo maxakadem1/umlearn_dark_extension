@@ -1,13 +1,15 @@
-if (document.querySelector(".popup")) {
-  const button = document.querySelector(".button");
-  const images = document.querySelector(".images");
+const button = document.querySelector(".button");
+const images = document.querySelector(".images");
 
-  chrome.storage.local.set({ buttonOn: false }, function () {});
+if (document.querySelector(".popup")) {
+  //chrome.storage.local.set({ buttonOn: false }, function () {});
 
   chrome.storage.local.get(["buttonOn"], function (result) {
     console.log("I got: " + result.buttonOn);
     buttonOn = result.buttonOn;
-    //set image light bulb in the pop up to be dark if the user used dark mode previously
+    if (buttonOn == true) {
+      images.src = "1.svg";
+    }
   });
 
   button.addEventListener("click", () => {
