@@ -1,6 +1,7 @@
+//IIFE that applies a dark theme to the page
 (function()
 {
-    let media = document.querySelectorAll("img, picture, video");
+    let media = document.querySelectorAll("img, picture, video, div.d2l-fileviewer, div.vui-mediaplayer");
     console.log("App on ran");
 
     document.querySelector("html").style.filter = "invert(1) hue-rotate(180deg)";

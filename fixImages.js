@@ -1,3 +1,5 @@
+//IIFE that fixes custom UMlearn image containers so that they appear normal when a dark theme is applied
+
 (function waitForCourseContainer() {
     const observer = new MutationObserver(function (mutations, mutationInstance) {
         const element = document.querySelectorAll("d2l-my-courses-container");

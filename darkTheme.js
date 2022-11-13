@@ -1,9 +1,8 @@
 const button = document.querySelector(".button");
 const images = document.querySelector(".images");
 
+//get the prev state of the button, if it was true - > set the image on the button to the dark mode state
 if (document.querySelector(".popup")) {
-  //chrome.storage.local.set({ buttonOn: false }, function () {});
-
   chrome.storage.local.get(["buttonOn"], function (result) {
     console.log("I got: " + result.buttonOn);
     buttonOn = result.buttonOn;
@@ -18,7 +17,6 @@ if (document.querySelector(".popup")) {
       //change local storage to true
       chrome.storage.local.set({ buttonOn: true }, function () {});
       console.log("I set: " + buttonOn);
-      // localStorage.setItem("buttonOn", "true");
 
       chrome.tabs.query({ active: true }, function (tabs) {
         let tab = tabs[0];
@@ -28,14 +26,12 @@ if (document.querySelector(".popup")) {
         });
       });
 
-      //change 1.svg to 2.svg
       images.src = "1.svg";
     } else if (buttonOn == true) {
       buttonOn = false;
       //change local storage to false
       chrome.storage.local.set({ buttonOn: false }, function () {});
       console.log("I set: " + buttonOn);
-      //localStorage.setItem("buttonOn", "false");
 
       chrome.tabs.query({ active: true }, function (tabs) {
         let tab = tabs[0];
@@ -45,10 +41,9 @@ if (document.querySelector(".popup")) {
         });
       });
 
-      //change 1.svg to 2.svg
       images.src = "2.svg";
     } else {
-      console.log("error");
+      console.log("very descriptive error");
     }
   });
 }

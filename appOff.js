@@ -1,5 +1,6 @@
+//IIFE that returns a page to the original state
 (function () {
-  let media = document.querySelectorAll("img, picture, video");
+  let media = document.querySelectorAll("img, picture, video, div.d2l-fileviewer, div.vui-mediaplayer");
 
   console.log("app off ran");
 

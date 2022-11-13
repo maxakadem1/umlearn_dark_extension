@@ -1,4 +1,4 @@
-// "persistent": true was removed from manifest.json
+//set up a listener that applies dark mode before onDOMContentLoaded 
 chrome.webNavigation.onCommitted.addListener(function () {
   chrome.tabs.query({ active: true }, function (tabs) {
     let tab = tabs[0];
