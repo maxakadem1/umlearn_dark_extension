@@ -6,7 +6,7 @@
 
 #### Created by Maxim Abdulkhalikov and Denys Popov, fellow UofM students.
 
-===
-https://media.discordapp.net/attachments/988276430607638570/1040766826403074049/image.png
+![image](https://user-images.githubusercontent.com/63835313/201501073-d3af56cd-4c45-4b71-a95f-66488933172a.png)
+
 
 ## You can find this extension on Chrome Extension Store under the name of "UMLEARN DARK"
